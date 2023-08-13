@@ -1,0 +1,239 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--icon-bgc: rgb(255, 255, 255);
+	--light-gray: hsl(217, 16%, 45%);
+	--blue-text: hsl(229, 64%, 46%);
+	--dark-grey: hsl(229, 25%, 31%);
+}
+body {
+	height: 100vh;
+	font-family: "Barlow Semi Condensed", sans-serif;
+	background: linear-gradient(hsl(214, 47%, 23%), hwb(238 8% 78%));
+}
+
+.heading {
+	display: flex;
+	justify-content: space-between;
+	width: 40%;
+	padding: 1rem;
+	margin-inline: auto;
+	margin-block: 2rem 0;
+	border: 2px solid var(--light-gray);
+	border-radius: 15px;
+	color: var(--icon-bgc);
+	text-transform: uppercase;
+	&__title {
+		display: flex;
+		flex-direction: column;
+		line-height: 0.8;
+		font-size: 2rem;
+	}
+	&__score {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 5rem;
+		border-radius: 6px;
+		background-color: var(--icon-bgc);
+		&--title {
+			font-size: 0.7rem;
+			letter-spacing: 1px;
+			color: var(--blue-text);
+		}
+		&--value {
+			font-size: 2.8rem;
+			font-weight: 800;
+			line-height: 0.8;
+			color: var(--dark-grey);
+		}
+	}
+}
+.game-container {
+	display: flex;
+	position: relative;
+	width: 30rem;
+	margin: 0 auto;
+}
+.triangle {
+	position: absolute;
+	top: 9rem;
+	transform: translate(25%);
+}
+
+.game-container__item-border {
+	width: 9rem;
+	height: 9rem;
+	margin: 1rem;
+	border: 16px solid;
+	border-radius: 50%;
+	.icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 7rem;
+		height: 7rem;
+		margin-bottom: 1rem;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: var(--icon-bgc);
+		border-radius: 50%;
+		box-shadow: 0px -5px 0px hsl(0, 0%, 82%);
+	}
+	&--rock {
+		position: absolute;
+		top: 18rem;
+		left: 12rem;
+		transform: translate(-35%);
+	}
+	&--paper {
+		position: absolute;
+		top: 4rem;
+		left: 1rem;
+	}
+	&--scissors {
+		position: absolute;
+		top: 4rem;
+		right: 1rem;
+	}
+}
+.paper-border-color {
+	border-color: hsl(230, 89%, 65%);
+	box-shadow: 0px 5px 1px hsl(230, 89%, 62%);
+}
+.rock-border-color {
+	border-color: hsl(349, 70%, 56%);
+	box-shadow: 0px 5px 1px hsl(349, 71%, 52%);
+}
+.scissors-border-color {
+	border-color: hsl(40, 84%, 53%);
+	box-shadow: 0px 5px 1px hsl(39, 89%, 49%);
+}
+.rules-container {
+	width: 100%;
+	&__open-btn {
+		position: absolute;
+		bottom: 2rem;
+		right: 5rem;
+		padding: 0.5rem 2rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		border: 1px solid var(--icon-bgc);
+		border-radius: 5px;
+		color: var(--icon-bgc);
+		background-color: transparent;
+	}
+	&__background {
+		display: flex;
+		align-items: center;
+	}
+	&__rules-content {
+		display: flex;
+		flex-direction: column;
+		width: 23rem;
+		margin: 0 auto;
+		border-radius: 10px;
+		background-color: var(--icon-bgc);
+	}
+	&__rules-img {
+		padding-block: 1.5rem;
+	}
+	&__close-btn {
+		border: none;
+		background-color: transparent;
+	}
+	&__rules-flex {
+		display: flex;
+		justify-content: space-between;
+		padding: 1.5rem;
+	}
+	&__rules-title {
+		font-size: 1.5rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: var(--dark-grey);
+	}
+}
+
+.game-round {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 35rem;
+	margin: 0 auto;
+	padding-top: 5rem;
+	&__title {
+		display: flex;
+		justify-content: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: bold;
+		color: var(--icon-bgc);
+	}
+	&__btn {
+		padding: 0.8rem 2.5rem;
+		font-size: 0.7rem;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		border: none;
+		border-radius: 5px;
+		color: var(--dark-grey);
+	}
+	&__result-name {
+		display: flex;
+		justify-content: center;
+		height: 2.5rem;
+		margin-bottom: 1rem;
+		font-size: 2.5rem;
+		text-transform: uppercase;
+		color: var(--icon-bgc);
+	}
+}
+
+.img {
+	display: flex;
+	justify-content: center;
+}
+
+.background-active {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	backdrop-filter: blur(2px);
+	background-color: rgba(0, 0, 0, 0.329);
+}
+.inactive {
+	display: none;
+}
+
+.zIndex-active {
+	z-index: -10;
+}
+.computer-icon-bg {
+	width: 7rem;
+	height: 7rem;
+	margin: 2rem;
+	border-radius: 50%;
+	background-color: hsl(229, 50%, 20%);
+}
+
+.win-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 9rem;
+	height: 9rem;
+	border-radius: 50%;
+	transition: box-shadow 0.5s ease-out 1s;
+	box-shadow:
+		0 0 0 40px rgba(255, 255, 255, 0.034),
+		0 0 0 80px rgba(255, 255, 255, 0.027),
+		0 0 0 120px rgba(255, 255, 255, 0.014);
+}

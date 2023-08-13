@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <main>
+    <div class="heading">
+      <h1 class="heading__title"><span>Rock</span><span>Paper</span><span>Scissors</span></h1>
+      <div class="heading__score">
+        <p class="heading__score--title">Score<span></span></p>
+        <p class="heading__score--value" id="score">0</p>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <img id="triangleImg" class="triangle">
+      <div class="game-container__item-border game-container__item-border--paper paper-border-color paper">
+        <div class="icon"><img id="paperImg" alt="paper icon"></div>
+      </div>
+      <div class="game-container__item-border game-container__item-border--scissors scissors-border-color scissors">
+        <div class="icon"> <img id="scissorsImg" alt="scissors icon"></div>
+      </div>
+      <div class="game-container__item-border game-container__item-border--rock rock-border-color rock">
+        <div class="icon"><img id="rockImg" alt="rock icon"></div>
+      </div>
+    </div>
+
+    <div class="battle-container"></div>
+
+    <div id="rules-container">
+      <button id="rules-btn" class="rules-container__open-btn">Rules</button>
+      <div id="rules-background" class="rules-container__background">
+        <div id="rules-image" class="rules-container__rules-content">
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
