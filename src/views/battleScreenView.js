@@ -5,6 +5,7 @@ import scissors from "../assets/scissors.svg";
 function battleScreen() {
 	let playerIconSrc;
 	const battleContainer = document.querySelector(".battle-container");
+
 	const battleMarkup = () => {
 		battleContainer.innerHTML = `
 		<div class="game-round">
@@ -81,7 +82,9 @@ function battleScreen() {
 				const resultContainer = document.querySelector(
 					".game-round__result-container"
 				);
+				const gameContainer = document.querySelector(".game-round");
 				resultContainer.style.display = "block";
+				gameContainer.style.justifyContent = "space-between";
 				resolve();
 			}, 1000);
 		});
