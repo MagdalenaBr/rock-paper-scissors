@@ -1,7 +1,7 @@
 import "./style.scss";
-import { iconsView } from "./viwes/iconsView";
-import { rules } from "./viwes/rulesView";
-import { battle } from "./viwes/battleScreenView";
+import { iconsView } from "./views/iconsView";
+import { rules } from "./views/rulesView";
+import { battle } from "./views/battleScreenView";
 
 iconsView();
 rules.displayRules();
@@ -11,7 +11,7 @@ const gameLogic = async () => {
 	const player = document.getElementById("player-icon-src").src;
 	const computer = document.getElementById("computer-icon-src").src;
 	const roundResult = document.getElementById("game-result");
-	console.log(document.getElementById("computer-icon-src").src); 
+	console.log(document.getElementById("computer-icon-src").src);
 	const playerIcon = document.querySelector(".player-icon-highlight");
 	const computerIcon = document.querySelector(".computer-icon-highlight");
 	if (
