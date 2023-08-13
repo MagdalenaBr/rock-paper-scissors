@@ -1,7 +1,7 @@
 import "./style.scss";
-import { iconsView } from "./views/iconsView";
-import { rules } from "./views/rulesView";
-import { battle } from "./views/battleScreenView";
+import iconsView from "./views/iconsView";
+import rules from "./views/rulesView";
+import battle from "./views/battleScreenView";
 
 iconsView();
 rules.displayRules();
@@ -11,7 +11,6 @@ const gameLogic = async () => {
 	const player = document.getElementById("player-icon-src").src;
 	const computer = document.getElementById("computer-icon-src").src;
 	const roundResult = document.getElementById("game-result");
-	console.log(document.getElementById("computer-icon-src").src);
 	const playerIcon = document.querySelector(".player-icon-highlight");
 	const computerIcon = document.querySelector(".computer-icon-highlight");
 	if (
@@ -19,8 +18,7 @@ const gameLogic = async () => {
 		(player.includes("rock") && computer.includes("rock")) ||
 		(player.includes("scissors") && computer.includes("scissors"))
 	) {
-		value;
-
+		// value;
 		roundResult.textContent = "draw";
 	}
 
@@ -30,7 +28,7 @@ const gameLogic = async () => {
 		(player.includes("scissors") && computer.includes("paper"))
 	) {
 		roundResult.textContent = "you win";
-		value++;
+		value += 1;
 		battle.winnerHighlight(playerIcon);
 	}
 
@@ -40,12 +38,12 @@ const gameLogic = async () => {
 		(player.includes("scissors") && computer.includes("rock"))
 	) {
 		roundResult.textContent = "you lose";
-		value--;
+		value -= 1;
+		// value--;
 		battle.winnerHighlight(computerIcon);
 	}
 	await battle.showWinResult();
 	score.textContent = value;
-	console.log(value);
 };
 
 const game = () => {
@@ -53,7 +51,7 @@ const game = () => {
 		...document.querySelectorAll(".game-container__item-border"),
 	];
 	iconsArr.forEach(icon => {
-		icon.addEventListener("click", async function (e) {
+		icon.addEventListener("click", async e => {
 			const target = e.target.closest(".game-container__item-border")
 				.children[0].children[0].src;
 			battle.startGame(target);

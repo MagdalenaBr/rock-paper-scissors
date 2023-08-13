@@ -21,17 +21,7 @@ function rulesFn() {
 		const closeBtnImg = document.getElementById("close-btn-img");
 		closeBtnImg.src = iconClose;
 	};
-	const displayRules = () => {
-		const openRulesBtn = document.getElementById("rules-btn");
-		console.log(openRulesBtn);
-		openRulesBtn.addEventListener("click", function () {
-			toggleZIndex();
-			displayReulesMarkup();
-			setImgSrc();
-			toggleOverlay();
-			closeRulesWindow();
-		});
-	};
+	
 	const toggleZIndex = () => {
 		const gameContainer = document.querySelector(".game-container");
 		gameContainer.classList.toggle("zIndex-active");
@@ -50,9 +40,20 @@ function rulesFn() {
 		const closeBtnImg = document.getElementById("close-btn-img");
 		closeBtnImg.addEventListener("click", closeRulesFunc);
 	};
+	const displayRules = () => {
+		const openRulesBtn = document.getElementById("rules-btn");
+		openRulesBtn.addEventListener("click", ()=> {
+			toggleZIndex();
+			displayReulesMarkup();
+			setImgSrc();
+			toggleOverlay();
+			closeRulesWindow();
+		});
+	};
 	return {
 		displayRules,
 	};
 }
 
-export const rules = rulesFn();
+const rules = rulesFn();
+export default rules

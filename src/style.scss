@@ -67,21 +67,21 @@ body {
 }
 
 .game-container__item-border {
-	width: 9rem;
-	height: 9rem;
+	width: 11rem;
+	height: 11rem;
 	// margin: 1rem;
-	border: 16px solid;
+	border: 24px solid;
 	border-radius: 50%;
 	cursor: pointer;
 	.icon {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 7rem;
-		height: 7rem;
+		width: 8rem;
+		height: 8rem;
 		margin-bottom: 1rem;
-		background-repeat: no-repeat;
-		background-position: center;
+		// background-repeat: no-repeat;
+		// background-position: center;
 		background-color: var(--icon-bgc);
 		border-radius: 50%;
 		box-shadow: 0px -5px 0px hsl(0, 0%, 82%);
@@ -166,8 +166,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 1rem;
-	width: 35rem;
+	gap: 3rem;
+	width: 40rem;
 	margin: 0 auto;
 	padding-top: 5rem;
 	&__title {
@@ -229,7 +229,7 @@ body {
 .computer-icon-bg {
 	width: 7rem;
 	height: 7rem;
-	margin: 1rem;
+	margin-top: 4rem;
 	border-radius: 50%;
 	background-color: hsl(229, 50%, 20%);
 }

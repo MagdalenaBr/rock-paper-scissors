@@ -52,9 +52,9 @@ function battleScreen() {
 		}
 	};
 
-	const setComputerRandomIcon = () => {
-		return new Promise((resolve, reject) => {
-			setTimeout(function () {
+	const setComputerRandomIcon = () =>
+		new Promise(resolve => {
+			setTimeout(() => {
 				const number = Math.floor(Math.random() * 3) + 1;
 				const computerIconSrc = document.getElementById("computer-icon-src");
 				const computerIconBorder = document.getElementById("computer-icon");
@@ -75,9 +75,8 @@ function battleScreen() {
 				resolve();
 			}, 1000);
 		});
-	};
-	const showWinResult = () => {
-		return new Promise((resolve, reject) => {
+	const showWinResult = () =>
+		new Promise(resolve => {
 			setTimeout(() => {
 				const resultContainer = document.querySelector(
 					".game-round__result-container"
@@ -88,7 +87,6 @@ function battleScreen() {
 				resolve();
 			}, 1000);
 		});
-	};
 
 	const toggleGameContainer = () => {
 		const gameContainer = document.querySelector(".game-container");
@@ -98,6 +96,13 @@ function battleScreen() {
 		winner.classList.add("win-bg");
 	};
 
+	const newRound = () => {
+		const newRoundBtn = document.getElementById("new-round-btn");
+		newRoundBtn.addEventListener("click", () => {
+			toggleGameContainer();
+			battleContainer.classList.add("inactive");
+		});
+	};
 	const startGame = target => {
 		toggleGameContainer();
 		battleMarkup();
@@ -107,14 +112,6 @@ function battleScreen() {
 		battleContainer.classList.remove("inactive");
 	};
 
-	const newRound = () => {
-		const newRoundBtn = document.getElementById("new-round-btn");
-		newRoundBtn.addEventListener("click", function () {
-			toggleGameContainer();
-			battleContainer.classList.add("inactive");
-		});
-	};
-
 	return {
 		showWinResult,
 		winnerHighlight,
@@ -122,5 +119,5 @@ function battleScreen() {
 		setComputerRandomIcon,
 	};
 }
-
-export const battle = battleScreen();
+const battle = battleScreen();
+export default battle;
