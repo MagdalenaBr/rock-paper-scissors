@@ -9,7 +9,7 @@ function battleScreen() {
 	const battleMarkup = () => {
 		battleContainer.innerHTML = `
 		<div class="game-round">
-			<div>
+			<div class="game-round__grid-one">
 				<p class="game-round__title">You picked</p>
 				<div class="player-icon-highlight" >
 					<div class="game-container__item-border player-icon" id="player-icon">
@@ -17,11 +17,11 @@ function battleScreen() {
 					</div>
 				</div>
 			</div>
-			<div class="inactive game-round__result-container">
+			<div class="inactive game-round__result-container game-round__grid-two">
 				<p class="game-round__result-name" id="game-result"></p>
 				<button id="new-round-btn" class="game-round__btn">Play again</button>
 			</div>
-			<div>
+			<div class="game-round__grid-three">
 				<p class="game-round__title">The house picked</p>
 				<div class="computer-icon-highlight">
 					<div class="computer-icon-bg computer-icon" id="computer-icon">
