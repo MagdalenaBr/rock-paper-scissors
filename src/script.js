@@ -13,14 +13,7 @@ const gameLogic = async () => {
 	const roundResult = document.getElementById("game-result");
 	const playerIcon = document.querySelector(".player-icon-highlight");
 	const computerIcon = document.querySelector(".computer-icon-highlight");
-	// if (
-	// 	(player.includes("paper") && computer.includes("paper")) ||
-	// 	(player.includes("rock") && computer.includes("rock")) ||
-	// 	(player.includes("scissors") && computer.includes("scissors"))
-	// ) {
-	// 	// value;
-	// 	roundResult.textContent = "draw";
-	// }
+
 	if (player === computer) roundResult.textContent = "draw";
 
 	if (
