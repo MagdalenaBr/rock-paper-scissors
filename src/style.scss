@@ -224,6 +224,9 @@ main {
 		grid-template-rows: 1fr 1fr;
 		align-items: center;
 		justify-items: center;
+		.gamme-round__title {
+			padding-top: 1rem;
+		}
 	}
 	&__title {
 		display: flex;
@@ -321,6 +324,11 @@ main {
 			bottom: 1rem;
 		}
 	}
+
+	.computer-icon-bg {
+		width: 8rem;
+		height: 8rem;
+	}
 }
 
 @media (min-width: 750px) {
@@ -363,6 +371,80 @@ main {
 			top: -2rem;
 		}
 	}
+	.computer-icon-bg {
+		width: 11rem;
+		height: 11rem;
+	}
+
+	.rules-container {
+		// width: 40%;
+		// &__open-btn {
+		// 	position: absolute;
+		// 	// bottom: 2rem;
+		// 	bottom: 4rem;
+		// 	right: 50%;
+		// 	transform: translate(50%);
+		// 	// right: 5rem;
+		// 	padding: 0.5rem 2rem;
+		// 	letter-spacing: 2px;
+		// 	text-transform: uppercase;
+		// 	border: 1px solid var(--icon-bgc);
+		// 	border-radius: 5px;
+		// 	color: var(--icon-bgc);
+		// 	background-color: transparent;
+		// 	cursor: pointer;
+		// }
+		// &__background {
+		// 	display: flex;
+		// 	align-items: center;
+		// }
+		&__rules-content {
+			// display: flex;
+			// flex-direction: column;
+			width: 25rem;
+			height: 25rem;
+			// width: 30%;
+			// height: 45%;
+
+			border-radius: 25px;
+			// // width: 23rem;
+			// margin: 0 auto;
+			// // border-radius: 10px;
+			// background-color: var(--icon-bgc);
+		}
+		// &__rules-img {
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	transform: translate(0%, -50%);
+		// 	padding-block: 1.5rem;
+		// }
+		&__close-btn {
+			position: absolute;
+			top: -30%;
+			// right: -10%;
+			transform: translate(-50%);
+			border: none;
+			background-color: transparent;
+		}
+		&__rules-flex {
+			display: flex;
+			justify-content: space-between;
+			padding: 1.5rem;
+		}
+		&__rules-title {
+			// font-size: 1.5rem;
+			font-size: 1.9rem;
+			position: absolute;
+			top: 4rem;
+			left: 50%;
+			transform: translate(-50%);
+			font-weight: bold;
+			text-transform: uppercase;
+			color: var(--dark-grey);
+		}
+	}
+
+
 }
 
 @media (min-width: 1000px) and (max-height: 850px) {
@@ -386,6 +468,10 @@ main {
 	}
 	.triangle {
 		scale: (0.8);
+	}
+	.computer-icon-bg {
+		width: 8rem;
+		height: 8rem;
 	}
 }
 
