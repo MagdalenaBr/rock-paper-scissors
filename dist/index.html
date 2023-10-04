@@ -4,75 +4,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
 <script defer src="main.js"></script></head>
 
 <body>
 
   <main>
     <div class="heading">
-      <h1><span>Rock</span><span>Paper</span><span>Scissors</span></h1>
-      <p class="score">Score<span></span></p>
+      <h1 class="heading__title"><span>Rock</span><span>Paper</span><span>Scissors</span></h1>
+      <div class="heading__score">
+        <p class="heading__score--title">Score<span></span></p>
+        <p class="heading__score--value" id="score">0</p>
+      </div>
     </div>
-    <!-- 
+
     <div class="game-container">
-      <div class="game-container__item-border">
-        <div class="paper"></div>
+      <img id="triangleImg" class="triangle">
+      <div class="game-container__item-border game-container__item-border--paper paper-border-color paper">
+        <div class="icon"><img id="paperImg" alt="paper icon"></div>
       </div>
-      <div class="game-container__item-border">
-        <div class="scissors"></div>
+      <div class="game-container__item-border game-container__item-border--scissors scissors-border-color scissors">
+        <div class="icon"> <img id="scissorsImg" alt="scissors icon"></div>
       </div>
-      <div class="game-container__item-border--rock">
-        <div class="rock"></div>
-      </div> -->
-
-
-
- <div class="paper"></div>
- 
-
-   
-
-
-
-
-
-
+      <div class="game-container__item-border game-container__item-border--rock rock-border-color rock">
+        <div class="icon"><img id="rockImg" alt="rock icon"></div>
+      </div>
     </div>
 
+    <div class="battle-container"></div>
+
+    <div id="rules-container">
+      <button id="rules-btn" class="rules-container__open-btn">Rules</button>
+      <div id="rules-background" class="rules-container__background">
+        <div id="rules-image" class="rules-container__rules-content">
+        </div>
+      </div>
+    </div>
   </main>
-  <!-- Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again -->
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 
 </html>
