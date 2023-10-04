@@ -1,4 +1,3 @@
 # Frontend Mentor - Rock, Paper, Scissors
 
-- [Live](https://rock-paper-scissorsmb.netlify.app/)
-
+- [Live](https://spontaneous-truffle-7f8927.netlify.app/)
